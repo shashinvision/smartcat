@@ -7,81 +7,17 @@ content = "You are an extremely skilled programmer with a keen eye for detail an
 
 [[messages]]
 role = "user"
-content = '''
-creame un readme para este proyecto api = "ollama"
-char_limit = 50000
-
-[[messages]]
-role = "system"
-content = "You are an extremely skilled programmer with a keen eye for detail and an emphasis on readable code. You have been tasked with acting as a smart version of the cat unix program. You take text and a prompt in and write text out. For that reason, it is of crucial importance to just write the desired output. Do not under any circumstance write any comment or thought as your output will be piped into other programs. Do not write the markdown delimiters for code as well. Sometimes you will be asked to implement or extend some input code. Same thing goes here, write only what was asked because what you write will be directly added to the user's editor. Never ever write ``` around the code. Make sure to keep the indentation and formatting. "
-
-[[messages]]
-role = "user"
-content = "correr mi contenedor de docker como lo hgago eeb7db7727"
+content = "dame un ejemplo de js hola mundo "
 
 [[messages]]
 role = "assistant"
 content = """
-docker run -d --name eeb7db7727 -p 80:80 hgago/nginx
-"""
-# Prompt config files
-# more details and examples at https://github.com/efugier/smartcat#configuration
+Sure, here's an example of a JavaScript function that outputs a plain text message:
 
-[default]
-api = "ollama"
-char_limit = 50000
-
-[[default.messages]]
-role = "system"
-content = "You are an extremely skilled programmer with a keen eye for detail and an emphasis on readable code. You have been tasked with acting as a smart version of the cat unix program. You take text and a prompt in and write text out. For that reason, it is of crucial importance to just write the desired output. Do not under any circumstance write any comment or thought as your output will be piped into other programs. Do not write the markdown delimiters for code as well. Sometimes you will be asked to implement or extend some input code. Same thing goes here, write only what was asked because what you write will be directly added to the user's editor. Never ever write ``` around the code. Make sure to keep the indentation and formatting. "
-
-[empty]
-api = "ollama"
-messages = []
-char_limit = 50000
-'''
-
-[[messages]]
-role = "assistant"
-content = '''
-# SmartCat - Ollama Integration
-
-This project provides a smartcat interface leveraging the Ollama API. It's designed to be a highly responsive and efficient way to interact with Ollama models.
-
-## Features
-
-*   **Ollama Integration:** Seamlessly integrates with the Ollama API for model inference.
-*   **Dynamic Command Generation:**  Generates appropriate Docker commands based on user prompts.
-*   **Character Limit:** Enforces a character limit (50000) to prevent excessively long prompts and responses.
-*   **User-Friendly:**  Designed for ease of use and quick command generation.
-
-## Configuration
-
-The following configuration options are available:
-
-*   `api`:  Set to "ollama" to specify the target API.
-*   `char_limit`:  Maximum character limit for prompts and responses (50000).
-
-## Usage
-
-To run the Ollama container, use the following command:
-
-```
-docker run -d --name eeb7db7727 -p 80:80 hgago/nginx
+```javascript
+function printMessage() {
+  console.log(\"Hello World!\");
+}
 ```
 
-This command will:
-
-*   `-d`: Run the container in detached mode (background).
-*   `--name eeb7db7727`: Assign the name "eeb7db7727" to the container.
-*   `-p 80:80`:  Map port 80 on the host machine to port 80 in the container.
-*   `hgago/nginx`:  Use the `hgago/nginx` Docker image, which includes Ollama.
-
-## Example
-
-User: correr mi contenedor de docker como lo hgago eeb7db7727
-
-Assistant:
-```
-docker run -d --name eeb7db7727 -p 80:80 hgago/nginx
-```'''
+In this example, we define a function `printMessage()` with a single line of code (in addition to being without the `console` statement) that prints out a message: `\"Hello World!\"`. This is just a simple text output. You can add more complex logic or other types of outputs like images or data-tables using functions in JavaScript as well."""
